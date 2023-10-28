@@ -12,15 +12,57 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./sass/main.css" />
 
-    <title>Demo</title>
+    <title>UX Adeel</title>
 </head>
 
 <body>
-    <header></header>
-    <main></main>
+    <header class="header grid grid-col90">
+      <div class="block__inner">
+        <div class="header__logo">
+          <a href="#">
+            <div class="header__logo--img">
+              <img src="webImages/logo.png" alt="">
+            </div>
+            <div class="header__logo--txt">
+              <h6>UX ADEEL</h6>
+            </div>
+          </a>
+        </div>
+        <div class="header__center">
+          <a href="mailto:designeradeel@gmail.com">designeradeel@gmail.com</a>
+        </div>
+
+        <div class="header__right">
+          <ul>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Start A Project</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="banner grid grid-col90">
+          <h1>
+            <div class="bannert">
+              
+              <span>user</span>
+              <div class="bannert2">
+                
+                <img src="webImages/1.png" alt="">
+              </div>
+              <span>centered </span>
+            </div>
+              <span>designer</span>
+          </h1>
+
+      </section>
+    </main>
     <footer></footer>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -29,6 +71,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollTrigger.normalizeScroll(true)
+
+// create the smooth scroller FIRST!
+let smoother = ScrollSmoother.create({
+  smooth: 2,
+  effects: true,
+  normalizeScroll: true
+});
+
+// pin box-c when it reaches the center of the viewport, for 300px
+ScrollTrigger.create({
+  trigger: ".box-c",
+  pin: true,
+  start: "center center",
+  end: "+=300",
+  markers: true
+});
+
+document.querySelector("button").addEventListener("click", e => {
+  // scroll to the spot where .box-c is in the center.
+  // parameters: element, smooth, position
+  smoother.scrollTo(".box-c", true, "center center");
+  
+  // or you could animate the scrollTop:
+  // gsap.to(smoother, {
+  // 	scrollTop: smoother.offset(".box-c", "center center"),
+  // 	duration: 1
+  // });
+});
+
+    </script>
     <script src="./js/main.js"></script>
 </body>
 
