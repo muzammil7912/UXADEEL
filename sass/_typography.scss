@@ -1,6 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Alike&family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 /* ------------------Typography------------------ */
 
+@font-face {
+    font-family: 'Aventa-LightItallic';
+    src: url('../css/fonts/Aventa-LightItallic.woff2') format('woff2'),
+        url('../css/fonts/Aventa-LightItallic.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aventa-Light';
+    src: url('../css/fonts/Aventa-Light.woff2') format('woff2'),
+        url('../css/fonts/Aventa-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Qeilab';
+    src: url('../css/fonts/Qeilab.woff2') format('woff2'),
+        url('../css/fonts/Qeilab.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;

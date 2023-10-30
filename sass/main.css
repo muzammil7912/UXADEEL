@@ -11,6 +11,27 @@ main {
 }
 
 /* ------------------Typography------------------ */
+@font-face {
+  font-family: "Aventa-LightItallic";
+  src: url("../css/fonts/Aventa-LightItallic.woff2") format("woff2"), url("../css/fonts/Aventa-LightItallic.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aventa-Light";
+  src: url("../css/fonts/Aventa-Light.woff2") format("woff2"), url("../css/fonts/Aventa-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Qeilab";
+  src: url("../css/fonts/Qeilab.woff2") format("woff2"), url("../css/fonts/Qeilab.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -307,6 +328,78 @@ img {
   z-index: -1;
 }
 .banner h1 span {
-  font-family: "Alike", serif;
+  font-family: "Qeilab", serif;
   font-size: 16rem;
+}
+
+.btn_1 {
+  position: relative;
+  line-height: 5rem;
+  overflow: hidden;
+  border-radius: 5rem;
+}
+
+.btn_1:hover .liquid {
+  top: 12rem;
+}
+
+.btn_1 a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.btn_1 dd {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 0 2rem;
+}
+
+.btn_1 .liquid {
+  position: absolute;
+  left: 0;
+  top: -11.8rem;
+  width: 30rem;
+  height: 30rem;
+  background: #4973ff;
+  box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.btn_1 .liquid:before,
+.btn_1 .liquid:after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.btn_1 .liquid:before {
+  border-radius: 45%;
+  background: rgb(20, 20, 20);
+  animation: animation 5s linear infinite;
+}
+
+.btn_1 .liquid:after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animation 10s linear infinite;
+}
+
+@keyframes animation {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
 }/*# sourceMappingURL=main.css.map */
