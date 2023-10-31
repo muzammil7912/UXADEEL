@@ -304,19 +304,23 @@ img {
 }
 
 .banner {
-  padding: 0 1rem;
+  padding: 0 1rem 10rem;
   background: #000;
   color: #fff;
 }
 .banner h1 {
   position: relative;
   z-index: 2;
+  margin: 0;
 }
 .banner h1 .bannert {
   display: flex;
 }
 .banner h1 .bannert2 {
   position: relative;
+}
+.banner h1 .bannert2 img {
+  width: 20rem;
 }
 .banner h1 .bannert2::before {
   content: "";
@@ -330,6 +334,103 @@ img {
 .banner h1 span {
   font-family: "Qeilab", serif;
   font-size: 16rem;
+}
+.banner h1 .btn_1 {
+  transform: rotate(-4deg);
+}
+.banner h1 .btn_1 dd {
+  transform: rotate(3deg);
+}
+.banner .social {
+  display: flex;
+  justify-content: space-between;
+}
+.banner .social .social_icon ul {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.banner .social .email {
+  position: relative;
+  margin-top: 5rem;
+}
+.banner .social .email a {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  display: grid;
+  place-items: center;
+}
+.banner .social .email a img {
+  width: 40%;
+}
+
+.aboutSection {
+  position: relative;
+  padding: 16rem 0;
+  background: #000;
+}
+.aboutSection .back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -4rem;
+  right: 0;
+  line-height: 1;
+  margin: 0 auto;
+  color: #868686;
+  text-align: center;
+  font-family: "Qeilab";
+  font-size: 36rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.1;
+}
+.aboutSection h6 {
+  width: 70%;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.ProductSection {
+  background: #000;
+  padding: 6rem 0;
+}
+.ProductSection li {
+  position: relative;
+  color: #fff;
+  color: #FFF;
+  font-size: 7rem;
+  padding: 1rem 5rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.ProductSection li span {
+  position: relative;
+}
+.ProductSection li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: top;
+  background: #a7472e;
+  width: 100%;
+  height: 0;
+  transition: 0.3s;
+}
+.ProductSection li:hover {
+  mix-blend-mode: difference;
+}
+.ProductSection li:hover::before {
+  height: 100%;
 }
 
 .btn_1 {
