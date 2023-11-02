@@ -44,6 +44,8 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  background: #000000;
+  color: #fff;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -327,7 +329,7 @@ img {
   position: absolute;
   width: 20rem;
   height: 26rem;
-  background: #F40E2D;
+  background: #f40e2d;
   border-radius: 10rem;
   z-index: -1;
 }
@@ -402,7 +404,7 @@ img {
 .ProductSection li {
   position: relative;
   color: #fff;
-  color: #FFF;
+  color: #fff;
   font-size: 7rem;
   padding: 1rem 5rem;
   font-weight: 600;
@@ -503,4 +505,60 @@ img {
   100% {
     transform: translate(-50%, -75%) rotate(360deg);
   }
+}
+.Rocking {
+  padding: 10rem 0;
+}
+.Rocking__heading {
+  text-align: center;
+}
+.Rocking__heading h5 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 1.6rem;
+  text-transform: uppercase;
+}
+.Rocking__heading h2 {
+  font-family: "Qeilab";
+  font-size: 13.2rem;
+  font-weight: 400;
+  letter-spacing: -0.6rem;
+}
+.Rocking__Main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  align-items: flex-end;
+  padding: 0 8rem;
+  margin-top: -25rem;
+  z-index: -1;
+  position: relative;
+}
+.Rocking__Main__left h4 {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 400;
+}
+.Rocking__Main__left span {
+  position: relative;
+  display: block;
+  background: #D9D9D9;
+  width: 20.4rem;
+  height: 0.1rem;
+  margin: 5rem 0 2rem;
+}
+.Rocking__Main__left p {
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+.Rocking__Main__Right-img {
+  position: relative;
+}
+.Rocking__Main__Right-img .img1 {
+  width: 100%;
+}
+.Rocking__Main__Right-img .img2 {
+  position: absolute;
+  right: -7.1rem;
+  bottom: -6.7rem;
 }/*# sourceMappingURL=main.css.map */

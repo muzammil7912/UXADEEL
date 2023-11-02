@@ -16,220 +16,274 @@
 @import "./footer";
 @import "./innerPage";
 
-
 .banner {
-    padding: 0 1rem 10rem;
-    background: #000;
-    color: #fff;
+  padding: 0 1rem 10rem;
+  background: #000;
+  color: #fff;
 
-    h1 {
+  h1 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    .bannert {
+      display: flex;
+
+      &2 {
         position: relative;
-        z-index: 2;
-        margin: 0;
-        .bannert {
-            display: flex;
 
-            &2 {
-                position: relative;
-
-                img {
-                    width: 20rem;
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 20rem;
-                    height: 26rem;
-                    background: #F40E2D;
-                    border-radius: 10rem;
-                    z-index: -1;
-                }
-            }
-            
+        img {
+          width: 20rem;
         }
 
-        span {
-            font-family: "Qeilab", serif;
-            font-size: 16rem;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20rem;
+          height: 26rem;
+          background: #f40e2d;
+          border-radius: 10rem;
+          z-index: -1;
         }
-        .btn_1 {
-            transform: rotate(-4deg);
-            dd{
-                transform: rotate(3deg)
-            }
-        }
+      }
     }
-    .social {
-display: flex;
-justify-content: space-between;
-        .social_icon {
-            ul {
-                gap: 2rem;
-                display: flex;
-                flex-direction: column;
-            }
-        }
-        .email {
-            position: relative;
-            margin-top: 5rem;
-            a{
-                width: 5rem;
-                height: 5rem;
-                border-radius: 2rem;
-background: rgba(255, 255, 255, 0.80);
-display: grid;
-place-items: center;
-    img {
-    width: 40%;
-}
-            }
-        }
+
+    span {
+      font-family: "Qeilab", serif;
+      font-size: 16rem;
     }
+    .btn_1 {
+      transform: rotate(-4deg);
+      dd {
+        transform: rotate(3deg);
+      }
+    }
+  }
+  .social {
+    display: flex;
+    justify-content: space-between;
+    .social_icon {
+      ul {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .email {
+      position: relative;
+      margin-top: 5rem;
+      a {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2rem;
+        background: rgba(255, 255, 255, 0.8);
+        display: grid;
+        place-items: center;
+        img {
+          width: 40%;
+        }
+      }
+    }
+  }
 }
 .aboutSection {
-    position: relative;
-    padding: 16rem 0;
-    background: #000;
+  position: relative;
+  padding: 16rem 0;
+  background: #000;
 
-    .back {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: -4rem;
-        right: 0;
-        line-height: 1;
-        margin: 0 auto;
-        color: #868686;
-text-align: center;
-font-family: 'Qeilab';
-font-size: 36rem;
-font-weight: 400;
-text-transform: uppercase;
-opacity: 0.1;
-    }
-h6 {
+  .back {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -4rem;
+    right: 0;
+    line-height: 1;
+    margin: 0 auto;
+    color: #868686;
+    text-align: center;
+    font-family: "Qeilab";
+    font-size: 36rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.1;
+  }
+  h6 {
     width: 70%;
     margin: 0 auto;
     color: #fff;
     text-align: center;
     font-size: 3rem;
-}
-
+  }
 }
 .ProductSection {
-    background: #000;
-    padding: 6rem 0;
+  background: #000;
+  padding: 6rem 0;
 
-    li {
-
-        position: relative;
-        color: #fff;
-        color: #FFF;
-font-size: 7rem;
-padding: 1rem 5rem;
-font-weight: 600;
-line-height: 1;
-text-transform: uppercase;
-transition: .3s;
-span {
+  li {
     position: relative;
-}
-&::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: top;
-    background: $primary-color;
-    width: 100%;
-    height: 0;
-    transition: .3s;
-}
-
-&:hover {
-    mix-blend-mode: difference;
-&::before{
-    height: 100%;
-}
-}
+    color: #fff;
+    color: #fff;
+    font-size: 7rem;
+    padding: 1rem 5rem;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: 0.3s;
+    span {
+      position: relative;
     }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transform-origin: top;
+      background: $primary-color;
+      width: 100%;
+      height: 0;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      mix-blend-mode: difference;
+      &::before {
+        height: 100%;
+      }
+    }
+  }
 }
 .btn_1 {
-    position: relative;
-    line-height: 5rem;
-    overflow: hidden;
-    border-radius: 5rem;
+  position: relative;
+  line-height: 5rem;
+  overflow: hidden;
+  border-radius: 5rem;
 }
 
 .btn_1:hover .liquid {
-    top: 12rem;
-
+  top: 12rem;
 }
 
 .btn_1 a {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 50%;
-
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50%;
 }
 
 .btn_1 dd {
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding: 0 2rem;
 }
 
 .btn_1 .liquid {
-    position: absolute;
-    left: 0;
-    top: -11.8rem;
-    width: 30rem;
-    height: 30rem;
-    background: #4973ff;
-    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
+  position: absolute;
+  left: 0;
+  top: -11.8rem;
+  width: 30rem;
+  height: 30rem;
+  background: #4973ff;
+  box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
 }
 
 .btn_1 .liquid:before,
 .btn_1 .liquid:after {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -75%);
-    background: #000;
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
 }
 
 .btn_1 .liquid:before {
-    border-radius: 45%;
-    background: rgba(20, 20, 20, 1);
-    animation: animation 5s linear infinite;
-
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animation 5s linear infinite;
 }
 
 .btn_1 .liquid:after {
-    border-radius: 40%;
-    background: rgba(20, 20, 20, 0.5);
-    animation: animation 10s linear infinite;
-
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animation 10s linear infinite;
 }
 
 @keyframes animation {
-    0% {
-        transform: translate(-50%, -75%) rotate(0deg);
-    }
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
 
-    100% {
-        transform: translate(-50%, -75%) rotate(360deg);
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+.Rocking {
+  padding: 10rem 0;
+  &__heading {
+    text-align: center;
+    h5 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 1.6rem;
+      text-transform: uppercase;
     }
+    h2 {
+      font-family: "Qeilab";
+      font-size: 13.2rem;
+      font-weight: 400;
+      letter-spacing: -0.6rem;
+    }
+  }
+
+  &__Main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    align-items: flex-end;
+    padding: 0 8rem;
+    margin-top: -25rem;
+    z-index: -1;
+    position: relative;
+    &__left {
+      h4 {
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: 400;
+      }
+      span {
+        position: relative;
+        display: block;
+        background: #D9D9D9;
+        width: 20.4rem;
+        height: 0.1rem;
+        margin: 5rem 0 2rem;
+      }
+      p {
+        font-size: 1.9rem;
+        font-weight: 400;
+      }
+    }
+    &__Right {
+      &-img {
+        position: relative;
+        .img1 {
+          width: 100%;
+        }
+        .img2 {
+          position: absolute;
+          right: -7.1rem;
+          bottom: -6.7rem;
+        }
+      }
+    }
+  }
 }
