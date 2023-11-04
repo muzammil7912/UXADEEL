@@ -1,0 +1,13 @@
+.btn_ {
+    padding: 1rem 2rem;
+    border-radius: 9.6rem;
+border: 1px solid #9C1528;
+background: linear-gradient(180deg, #F40E2D 33.33%, #9E0E21 100%);
+color: #F6F6F6;
+font-size: 1.6rem;
+font-weight: 600;
+text-transform: uppercase;
+&:hover {
+    color: #fff;
+}
+}
