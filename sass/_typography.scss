@@ -44,6 +44,7 @@ body {
     padding: 0;
     background: #000000;
     color: #fff;
+    cursor: none;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -109,4 +110,16 @@ a {
 
 img {
     vertical-align: middle;
+}
+
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    // transform: translate(-50%,-50%);
+    z-index: 99999999;
 }
